@@ -7,7 +7,9 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <script>
-  swal("Hello world!");
+  $('#create_student').submit(function (e) {
+     e.preventDefault();
+  });
 </script>
 </body>
 
