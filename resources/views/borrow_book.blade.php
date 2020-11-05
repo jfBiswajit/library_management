@@ -4,22 +4,20 @@
   </h3>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Select Student</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+    <select required class="form-control" id="exampleFormControlSelect1">
+      <option></option>
+      @foreach ($students as $student)
+          <option value="{{ $student->id }}">{{ $student->fname }} {{ $student->lname }}</option>
+      @endforeach
     </select>
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Select Book</label>
     <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+      <option></option>
+      @foreach ($books as $book)
+      <option value="{{ $book->id }}">{{ $book->title }}</option>
+      @endforeach
     </select>
   </div>
   <div class="form-row">

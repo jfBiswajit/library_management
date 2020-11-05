@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Book;
 use App\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LibraryController extends Controller
 {
@@ -66,6 +67,9 @@ class LibraryController extends Controller
       return response()->json(['success' => true]);
     }
 
-    return view('borrow_book');
+    $students = DB::table('students')->get();
+    $books = DB::table('books')->get();
+
+    return view('borrow_book', compact('students', 'books'));
   }
 }
