@@ -5,37 +5,6 @@
 </script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-<script>
-  $('#create_student').submit(function (e) {
-    e.preventDefault();
-    const fname = $('#fname');
-    const lname = $('#lname');
-    const studentId = $('#student_id');
-    const address = $('#address');
-    const validFrom = $('#valid_from');
-    const validTo = $('#valid_to');
-    console.log(validFrom.val());
-    console.log(validTo.val());
-    $.ajax({
-      url: 'create_student',
-      method: 'POST',
-      data: {
-        _token: "{{ csrf_token() }}",
-        fname: fname.val(),
-        lname: lname.val(),
-        studentId: studentId.val(),
-        address: address.val(),
-        validFrom: validFrom.val(),
-        validTo: validTo.val(),
-      },
-      success: function (response) {
-        swal("Success!", "New student added!", "success");
-        $('input').val('');
-      },
-      dataType: 'json',
-    });
-  });
-</script>
 </body>
 
 </html>

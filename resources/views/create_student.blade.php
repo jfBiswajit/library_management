@@ -1,6 +1,7 @@
 @include('include.header')
 <form id="create_student" class="w-50 mx-auto pt-5">
-  <h3 style="font-family: 'Kaushan Script', cursive;" class="p-4 bg-success text-white text-center">Crete New Student</h3>
+  <h3 style="font-family: 'Kaushan Script', cursive;" class="p-4 bg-success text-white text-center">Crete New Student
+  </h3>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="fname">First Name</label>
@@ -32,3 +33,35 @@
   <button type="submit" class="mt-5 btn btn-block btn-success btn-lg">Create Student</button>
 </form>
 @include('include.footer')
+
+<script>
+  $('#create_student').submit(function (e) {
+    e.preventDefault();
+    const fname = $('#fname');
+    const lname = $('#lname');
+    const studentId = $('#student_id');
+    const address = $('#address');
+    const validFrom = $('#valid_from');
+    const validTo = $('#valid_to');
+    console.log(validFrom.val());
+    console.log(validTo.val());
+    $.ajax({
+      url: 'create_student',
+      method: 'POST',
+      data: {
+        _token: "{{ csrf_token() }}",
+        fname: fname.val(),
+        lname: lname.val(),
+        studentId: studentId.val(),
+        address: address.val(),
+        validFrom: validFrom.val(),
+        validTo: validTo.val(),
+      },
+      success: function (response) {
+        swal("Success!", "New student added!", "success");
+        $('input').val('');
+      },
+      dataType: 'json',
+    });
+  });
+</script>
