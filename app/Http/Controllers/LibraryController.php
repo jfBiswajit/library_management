@@ -47,7 +47,7 @@ class LibraryController extends Controller
       return response()->json(['success' => true]);
     }
 
-    return view('create_book');
+    return view('add_book');
   }
 
   public function borrowBook(Request $req)

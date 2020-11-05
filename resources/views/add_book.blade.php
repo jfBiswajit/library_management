@@ -41,7 +41,7 @@
     const totalCopy = $('#total_copy');
 
     $.ajax({
-      url: 'create_book',
+      url: 'add_book',
       method: 'POST',
       data: {
         _token: "{{ csrf_token() }}",

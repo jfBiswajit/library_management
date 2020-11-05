@@ -1,6 +1,6 @@
 @include('include.header')
 <form id="create_student" class="w-50 mx-auto pt-5">
-  <h3 style="font-family: 'Kaushan Script', cursive;" class="p-4 bg-info text-white text-center">Borrow a Book
+  <h3 style="font-family: 'Kaushan Script', cursive;" class="p-4 bg-danger text-white text-center">Borrow a Book
   </h3>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Select Student</label>
@@ -13,7 +13,7 @@
     </select>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Select Student</label>
+    <label for="exampleFormControlSelect1">Select Book</label>
     <select class="form-control" id="exampleFormControlSelect1">
       <option>1</option>
       <option>2</option>
@@ -28,7 +28,7 @@
       <input required type="date" class="form-control" id="price">
     </div>
   </div>
-  <button type="submit" class="mt-5 btn btn-block btn-info btn-lg">Borrow</button>
+  <button type="submit" class="mt-5 btn btn-block btn-danger btn-lg">Borrow</button>
 </form>
 @include('include.footer')
 
