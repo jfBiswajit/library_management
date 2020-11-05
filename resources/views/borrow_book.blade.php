@@ -50,6 +50,7 @@
       success: function (response) {
         swal("Success!", "", "success");
         $('input').val('');
+        $('select').val('');
       },
       dataType: 'json',
     });
