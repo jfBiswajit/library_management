@@ -29,7 +29,8 @@
         validTo: validTo.val(),
       },
       success: function (response) {
-        console.log(response);
+        swal("Success!", "New student added!", "success");
+        $('input').val('');
       },
       dataType: 'json',
     });
