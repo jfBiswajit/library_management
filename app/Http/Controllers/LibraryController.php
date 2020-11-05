@@ -10,7 +10,10 @@ class LibraryController extends Controller
     return view('dashboard');
   }
 
-  public function createStudent() {
+  public function createStudent(Request $req) {
+    if ($req->ajax()) {
+      return response()->json($req->all());
+    }
     return view('create_student');
   }
 }

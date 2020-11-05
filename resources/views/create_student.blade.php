@@ -12,8 +12,8 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="id">Student ID</label>
-    <input required type="text" class="form-control" id="id" placeholder="XXX-XXX-XXX">
+    <label for="student_id">Student ID</label>
+    <input required type="text" class="form-control" id="student_id" placeholder="XXX-XXX-XXX">
   </div>
   <div class="form-group">
     <label for="address">Address</label>
