@@ -30,4 +30,23 @@ class LibraryController extends Controller
 
     return view('create_student');
   }
+
+  public function createBook(Request $req)
+  {
+    if ($req->ajax()) {
+      $student = new Student();
+      $student->fname = $req->fname;
+      $student->lname = $req->lname;
+      $student->student_id = $req->studentId;
+      $student->address = $req->address;
+      $student->valid_from = $req->validFrom;
+      $student->valid_to = $req->validTo;
+
+      $student->save();
+
+      return response()->json(['success' => true]);
+    }
+
+    return view('create_book');
+  }
 }
