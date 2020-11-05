@@ -37,14 +37,14 @@
 <script>
   $('#create_student').submit(function (e) {
     e.preventDefault();
+
     const fname = $('#fname');
     const lname = $('#lname');
     const studentId = $('#student_id');
     const address = $('#address');
     const validFrom = $('#valid_from');
     const validTo = $('#valid_to');
-    console.log(validFrom.val());
-    console.log(validTo.val());
+
     $.ajax({
       url: 'create_student',
       method: 'POST',
