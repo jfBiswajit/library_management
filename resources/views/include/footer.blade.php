@@ -14,6 +14,8 @@
     const address = $('#address');
     const validFrom = $('#valid_from');
     const validTo = $('#valid_to');
+    console.log(validFrom.val());
+    console.log(validTo.val());
     $.ajax({
       url: 'create_student',
       method: 'POST',
