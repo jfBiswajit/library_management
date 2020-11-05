@@ -1,3 +1,30 @@
 @include('include.header')
-
+<div id="create_student" class="w-50 mx-auto pt-5">
+  <h3 style="font-family: 'Kaushan Script', cursive; background: #563D7C" class="p-4 text-white text-center">Dashboard
+  </h3>
+  <div class="row justify-content-between" style="margin-right: 0; margin-left: 0">
+    <a class="col-3 bg-success text-white" style="height: 80px; text-decoration: none; cursor: pointer">
+      <p style="margin-top: 18%; text-align: center;  font-size: 1.2rem">ADD BOOK <span
+          style="display: inline-block; width: 30px; height: 30px; border-radius: 50%; background: white; text-align: center; font-weight: bold; margin-left: -3px"><span
+            class="text-success">10</span></span>
+      </p>
+    </a>
+    <a class="col-3 bg-info text-white" style="height: 80px; text-decoration: none; cursor: pointer">
+      <p style="margin-top: 18%; text-align: center;  font-size: 1.2rem">ADD USER <span
+          style="display: inline-block; width: 30px; height: 30px; border-radius: 50%; background: white; text-align: center; font-weight: bold; margin-left: -3px"><span
+            class="text-info">10</span></span>
+      </p>
+    </a>
+    <a class="col-3 bg-danger text-white" style="height: 80px; text-decoration: none; cursor: pointer">
+      <p style="margin-top: 18%; text-align: center;  font-size: 1.2rem">BORROW
+      </p>
+    </a>
+    <a class="col-3 bg-warning text-white" style="height: 80px; text-decoration: none; cursor: pointer">
+      <p style="margin-top: 18%; text-align: center;  font-size: 1.2rem">STATUS <span
+          style="display: inline-block; width: 30px; height: 30px; border-radius: 50%; background: white; text-align: center; font-weight: bold; margin-left: -3px"><span
+            class="text-warning">10</span></span>
+      </p>
+    </a>
+  </div>
+</div>
 @include('include.footer')
