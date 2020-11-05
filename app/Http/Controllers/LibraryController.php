@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Book;
+use App\Borrow;
 use App\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -54,15 +55,13 @@ class LibraryController extends Controller
   public function borrowBook(Request $req)
   {
     if ($req->ajax()) {
-      $student = new Book();
-      $student->fname = $req->fname;
-      $student->lname = $req->lname;
-      $student->student_id = $req->studentId;
-      $student->address = $req->address;
-      $student->valid_from = $req->validFrom;
-      $student->valid_to = $req->validTo;
+      $borrow = new Borrow();
+      $borrow->borrowed_by = $req->student;
+      $borrow->book = $req->book;
+      $borrow->is_returned = 0;
+      $borrow->return_date = $req->returnDate;
 
-      $student->save();
+      $borrow->save();
 
       return response()->json(['success' => true]);
     }

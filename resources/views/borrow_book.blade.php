@@ -3,7 +3,7 @@
   <h3 style="font-family: 'Kaushan Script', cursive;" class="p-4 bg-danger text-white text-center">Borrow a Book
   </h3>
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Select Student</label>
+    <label for="student">Select Student</label>
     <select required class="form-control" id="student">
       <option></option>
       @foreach ($students as $student)
@@ -12,7 +12,7 @@
     </select>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Select Book</label>
+    <label for="book">Select Book</label>
     <select class="form-control" id="book">
       <option></option>
       @foreach ($books as $book)
@@ -22,7 +22,7 @@
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="valid_from">Return Date</label>
+      <label for="return_date">Return Date</label>
       <input required type="date" class="form-control" id="return_date">
     </div>
   </div>
@@ -34,7 +34,7 @@
   $('#create_student').submit(function (e) {
     e.preventDefault();
 
-    const student = $('#studnet');
+    const student = $('#student');
     const book = $('#book');
     const returnDate = $('#return_date');
 
@@ -43,9 +43,9 @@
       method: 'POST',
       data: {
         _token: "{{ csrf_token() }}",
-        student: title.val(),
-        book: author.val(),
-        returnDate: isbn.val(),
+        student: student.val(),
+        book: book.val(),
+        returnDate: returnDate.val(),
       },
       success: function (response) {
         swal("Success!", "", "success");
