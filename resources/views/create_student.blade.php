@@ -1,6 +1,6 @@
 @include('include.header')
 <form id="create_student" class="w-50 mx-auto pt-5">
-  <h3 style="font-family: 'Kaushan Script', cursive;" class="p-4 bg-success text-white text-center">Crete New Student
+  <h3 style="font-family: 'Kaushan Script', cursive;" class="p-4 bg-info text-white text-center">Crete New Student
   </h3>
   <div class="form-row">
     <div class="form-group col-md-6">
@@ -30,7 +30,7 @@
       <input required type="date" class="form-control" id="valid_to">
     </div>
   </div>
-  <button type="submit" class="mt-5 btn btn-block btn-success btn-lg">Create Student</button>
+  <button type="submit" class="mt-5 btn btn-block btn-info btn-lg">Create Student</button>
 </form>
 @include('include.footer')
 

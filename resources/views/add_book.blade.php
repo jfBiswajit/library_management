@@ -1,6 +1,6 @@
 @include('include.header')
 <form id="create_student" class="w-50 mx-auto pt-5">
-  <h3 style="font-family: 'Kaushan Script', cursive;" class="p-4 bg-info text-white text-center">Add New Book
+  <h3 style="font-family: 'Kaushan Script', cursive;" class="p-4 bg-success text-white text-center">Add New Book
   </h3>
   <div class="form-row">
     <div class="form-group col-md-6">
@@ -26,7 +26,7 @@
       <input required type="number" class="form-control" id="total_copy">
     </div>
   </div>
-  <button type="submit" class="mt-5 btn btn-block btn-info btn-lg">Add Book</button>
+  <button type="submit" class="mt-5 btn btn-block btn-success btn-lg">Add Book</button>
 </form>
 @include('include.footer')
 
