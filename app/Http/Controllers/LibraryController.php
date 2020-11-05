@@ -71,4 +71,8 @@ class LibraryController extends Controller
 
     return view('borrow_book', compact('students', 'books'));
   }
+
+  public function status() {
+    return view('status');
+  }
 }

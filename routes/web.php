@@ -9,3 +9,4 @@ Route::get('/add_book', 'LibraryController@createBook');
 Route::post('/add_book', 'LibraryController@createBook');
 Route::get('/borrow_book', 'LibraryController@borrowBook');
 Route::post('/borrow_book', 'LibraryController@borrowBook');
+Route::get('/status', 'LibraryController@status');

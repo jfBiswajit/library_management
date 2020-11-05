@@ -22,10 +22,10 @@
       <p style="margin-top: 18%; text-align: center;  font-size: 1.2rem">BORROW
       </p>
     </a>
-    <a class="col-3 bg-warning text-white" style="height: 80px; text-decoration: none; cursor: pointer">
+    <a class="col-3 text-white" style="height: 80px; text-decoration: none; cursor: pointer; background: #f6830f">
       <p style="margin-top: 18%; text-align: center;  font-size: 1.2rem">STATUS <span
-          style="display: inline-block; width: 30px; height: 30px; border-radius: 50%; background: white; text-align: center; font-weight: bold; margin-left: -3px"><span
-            class="text-warning">10</span></span>
+          style="display: inline-block; width: 30px; height: 30px; border-radius: 50%; background: white; text-align:
+          center; font-weight: bold; margin-left: -3px"><span style="color: #f6830f">10</span></span>
       </p>
     </a>
   </div>
