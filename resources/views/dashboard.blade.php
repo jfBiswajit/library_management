@@ -7,14 +7,14 @@
       style="height: 80px; text-decoration: none; cursor: pointer">
       <p style="margin-top: 18%; text-align: center;  font-size: 1.2rem">ADD BOOK <span
           style="display: inline-block; width: 30px; height: 30px; border-radius: 50%; background: white; text-align: center; font-weight: bold; margin-left: -3px"><span
-            class="text-success">10</span></span>
+            class="text-success">{{ $totalBooks }}</span></span>
       </p>
     </a>
     <a href="{{ url('create_student') }}" class="col-3 bg-info text-white"
       style="height: 80px; text-decoration: none; cursor: pointer">
       <p style="margin-top: 18%; text-align: center;  font-size: 1.2rem">ADD USER <span
           style="display: inline-block; width: 30px; height: 30px; border-radius: 50%; background: white; text-align: center; font-weight: bold; margin-left: -3px"><span
-            class="text-info">10</span></span>
+            class="text-info">{{ $totalUsers }}</span></span>
       </p>
     </a>
     <a href="{{ url('borrow_book') }}" class="col-3 bg-danger text-white"
@@ -26,7 +26,7 @@
       style="height: 80px; text-decoration: none; cursor: pointer; background: #f6830f">
       <p style="margin-top: 18%; text-align: center;  font-size: 1.2rem">STATUS <span
           style="display: inline-block; width: 30px; height: 30px; border-radius: 50%; background: white; text-align:
-          center; font-weight: bold; margin-left: -3px"><span style="color: #f6830f">10</span></span>
+          center; font-weight: bold; margin-left: -3px"><span style="color: #f6830f">{{ $status }}</span></span>
       </p>
     </a>
   </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Book;
 use App\Borrow;
 use App\Student;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -12,7 +13,11 @@ class LibraryController extends Controller
 {
   public function index()
   {
-    return view('dashboard');
+    $totalBooks = Book::all()->count();
+    $totalUsers = Student::all()->count();
+    $status = Borrow::where('is_returned', '=', '0')->count();
+
+    return view('dashboard', compact('totalBooks', 'totalUsers', 'status'));
   }
 
   public function createStudent(Request $req)
