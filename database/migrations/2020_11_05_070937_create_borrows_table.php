@@ -15,7 +15,7 @@ class CreateBorrowsTable extends Migration
   {
     Schema::create('borrows', function (Blueprint $table) {
       $table->bigIncrements('id');
-      $table->integer('borrowed_by');
+      $table->integer('borrowed_id');
       $table->integer('book');
       $table->boolean('is_returned');
       $table->date('return_date');

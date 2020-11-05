@@ -56,7 +56,7 @@ class LibraryController extends Controller
   {
     if ($req->ajax()) {
       $borrow = new Borrow();
-      $borrow->borrowed_by = $req->student;
+      $borrow->borrowed_id = $req->student;
       $borrow->book = $req->book;
       $borrow->is_returned = 0;
       $borrow->return_date = $req->returnDate;
@@ -72,7 +72,22 @@ class LibraryController extends Controller
     return view('borrow_book', compact('students', 'books'));
   }
 
-  public function status() {
-    return view('status');
+  public function status()
+  {
+    $borrowedBooks = Borrow::all();
+    $borrowedBookList = [];
+
+    foreach ($borrowedBooks as $book) {
+      $temp = [
+        'borrowed_by' => $book->borrowedBy->fname . ' ' . $book->borrowedBy->lname,
+        'book_title' => $book->borrowedBook->title,
+        'borrowed_date' => ($book->created_at)->format('Y-m-d'),
+        'return_date' => $book->return_date,
+      ];
+
+      $borrowedBookList[] = $temp;
+    }
+
+    return view('status', compact('borrowedBookList'));
   }
 }
